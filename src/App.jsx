@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Switched to HashRouter for GH Pages
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Switched back to BrowserRouter for clean URLs
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
@@ -20,7 +20,7 @@ function App() {
   return (
     <AuthProvider>
       <ExpenseProvider>
-        <Router>
+        <Router basename="/ExpenseTracker">
           <div className="min-h-screen bg-background-light text-gray-900 font-display">
             <Routes>
               {/* Public Routes */}
