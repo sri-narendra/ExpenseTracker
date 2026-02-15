@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/ExpenseTracker/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExpenseTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -10,15 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <script type="text/javascript">
       (function(l) {
-        var search = l.search;
-        if (search.indexOf('p=') !== -1) {
-          var path = search.split('p=')[1].split('&')[0].replace(/~and~/g, '&');
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + (path ? '/' + path : ''));
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="./assets/index-DxPV1ZSd.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-MAGKvIJv.css">
+    <script type="module" crossorigin src="/ExpenseTracker/assets/index-Md7QSr9o.js"></script>
+    <link rel="stylesheet" crossorigin href="/ExpenseTracker/assets/index-MAGKvIJv.css">
   </head>
   <body>
     <div id="root"></div>

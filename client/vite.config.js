@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/ExpenseTracker/',
   build: {
     outDir: '../',
     emptyOutDir: false, // Don't delete everything in the root!
