@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Changed to Routes/Route
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Switched to HashRouter for GH Pages
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
