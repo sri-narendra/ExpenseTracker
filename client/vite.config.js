@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   base: './',
   build: {
-    outDir: 'docs',
+    outDir: '../',
+    emptyOutDir: false, // Don't delete everything in the root!
   },
   server: {
     proxy: {
