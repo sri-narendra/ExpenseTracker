@@ -42,10 +42,11 @@ api.interceptors.response.use(
       localStorage.removeItem('user');
       
       const currentPath = window.location.pathname;
-      const isAuthPage = ['/login', '/signup'].includes(currentPath);
+      const basePath = currentPath.startsWith('/ExpenseTracker') ? '/ExpenseTracker' : '';
+      const isAuthPage = currentPath.includes('/login') || currentPath.includes('/signup');
 
       if (!isAuthPage) {
-        window.location.href = '/login';
+        window.location.href = `${basePath}/login`;
       }
     }
 
