@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-primary: #5048e5;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #121121;
+
+  --font-display: "Inter", "sans-serif";
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-gray-900 font-display;
+  }
+}
+
+.loader-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
